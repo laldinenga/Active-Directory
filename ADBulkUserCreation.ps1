@@ -1,5 +1,8 @@
 #Invoke ADBulkUserCreation.ps1
 
+#Usage PS C:\scripts> .\ADBulkUserCreation.ps1 -CSVFilePath
+# C:\scripts\BulkUserCreation.csv
+
 [CmdletBinding()]
 Param(
     [Parameter(Mandatory = $true, Position = 0)]
