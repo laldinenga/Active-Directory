@@ -1,3 +1,10 @@
+#usage:
+#PS C:\> ADBulkGroup -GroupName Sales-INDIA,Sales-US,Sales-Singapore -GroupScope Global
+
+#To reads group names from the c:\temp\groups.txt file and creates domainlocal security groups with these names:
+#PS C:\> Invoke-ADBulkGroup -GroupName (Get-Content c:\temp\groups.txt) -GroupScope DomainLocal
+
+#It first checks whether the group exists in Active Directory and then proceeds with creating it
 Function ADBulkGroup {
     [CmdletBinding()]
     Param(
