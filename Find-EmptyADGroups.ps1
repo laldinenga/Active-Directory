@@ -17,7 +17,7 @@ Function Find-EmptyADGroups {
     foreach($Group in $Groups) {
     $Members = Get-ADGroupMember -Identity $Group -Recursive:$Nested
     if(!$Members) {
-    $Group | select Name, DistinguishedName
+    $Group | Select-Object Name, DistinguishedName
     $Count++
     }
     }
